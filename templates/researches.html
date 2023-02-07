@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Inner Page Banner Area Start Here -->
+<!--<div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
+    <div class="container">
+        <div class="pagination-area">
+            <h1>News_02</h1>
+            <ul>
+                <li><a href="#">Home</a> -</li>
+                <li>News</li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+<!-- Inner Page Banner Area End Here -->
+<!-- News Page Area Start Here -->
+<div class="news-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="row">
+                    {% for article in articles %}
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="research-box1">
+                            <!--<img src="{{ MEDIA_URL }}/media/img/research/1.jpg" class="img-responsive" alt="research">-->
+                            <h3 class="sidebar-title"><a href="#">{{ article.title }}</a></h3>
+                            <p>{{article.initial | truncatewords:50}}</p>
+                            <a href="{% url 'web:research' id=article.id %}" class="default-big-btn">Read MOre</a>
+                        </div>
+                    </div>
+                    <!--<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                        <div class="news-box">
+                            <div class="news-img-holder">
+                                <img src="{{ MEDIA_URL }}/media/{{ article.articlefile_set.first.image }}" class="img-responsive" alt="research">
+                                <ul class="news-date2">
+                                    <li>{{ article.publish|date:"d M" }}</li>
+                                    <li>{{ article.publish|date:"Y" }}</li>
+                                </ul>
+                            </div>
+                            <h3 class="title-news-left-bold">
+                                {% if article.url|length > 0 %}
+                                    <a href="{{ article.url }}">
+                                {% else %}
+                                    <a href="{% url 'web:article' id=article.id %}">           
+                                {% endif %}
+                                        {{ article.title }}
+                                    </a>
+                            </h3>
+                            <p>{{article.body | truncatewords:34 | safe}}</p>
+                        </div>
+                    </div>-->
+                    {% endfor %}
+                    <!--<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <ul class="pagination-center">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- News Page Area End Here -->
+{% endblock content %}

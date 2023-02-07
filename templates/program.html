@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="research-details-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="row research-details-inner">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <h2 class="title-default-left-bold title-bar-high"><a href="#">{{content.title}}</a></h2>
+                        
+                    </div>
+                </div>
+                {{content.body | safe}}
+            </div>
+            
+            
+           <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                <div class="sidebar">
+                    
+                    <div class="sidebar-box">
+                        <div class="sidebar-box-inner">
+                            <h3 class="sidebar-title">Programs</h3>
+                            <ul class="sidebar-categories">
+                                <li><a href="{% url 'web:program' title='B.Sc. in EEE' %}">BSc in EEE</a></li>
+                                <li><a href="{% url 'web:program' title='B.Sc. in ETE' %}">BSc in ETE</a></li>
+                                <li><a href="{% url 'web:program' title='M.Sc. in EEE' %}">MSc in EEE</a></li>
+                                <li><a href="{% url 'web:program' title='M.Sc. in CNC' %}">MSc in CNC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+<!-- Research Details Page Area End Here -->
+{% endblock content %}

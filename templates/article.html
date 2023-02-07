@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Inner Page Banner Area Start Here -->
+<!--<div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
+    <div class="container">
+        <div class="pagination-area">
+            <h1>News Details</h1>
+            <ul>
+                <li><a href="#">Home</a> -</li>
+                <li>Details</li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+<!-- Inner Page Banner Area End Here -->
+<!-- News Details Page Area Start Here -->
+<div class="news-details-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+                <div class="row news-details-page-inner">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                       <!-- <div class="news-img-holder">
+                            <img src="{{ MEDIA_URL }}/media/articles/eee09012022/1.jpg" class="img-responsive" alt="research">
+                            <ul class="news-date1">
+                                <li>27 Dec</li>
+                                <li>2016</li>
+                            </ul>
+                        </div>-->
+                        <h2 class="title-default-left-bold-lowhight" style="text-align: center;"><a href="#">{{content.title}}</a></h2>
+                        <div class="container">
+                            <div class="slider1-area">
+                                <div class="bend niceties preview-1">
+                                    <div id="ensign-nivoslider-3" class="slides">
+                                        {% for path in content.newsimage_set.all %}
+                                            <img src="{{ MEDIA_URL }}/media/{{path.image}}" alt="slider" title="#slider-direction-3" />
+                                        {% endfor %}
+
+                                        <!--<img src="{{ MEDIA_URL }}/media/articles/eee09012022/1.jpg" alt="slider" title="#slider-direction-1" />
+                                        <img src="{{ MEDIA_URL }}/media/articles/eee09012022/2.jpg" alt="slider" title="#slider-direction-2" />
+                                        <img src="{{ MEDIA_URL }}/media/articles/eee09012022/3.jpg" alt="slider" title="#slider-direction-3" />-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+                        
+                    </div>
+                   
+                </div>
+                {{content.body | safe}}
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                <div class="sidebar">  
+                    <div class="sidebar-box">
+                        <div class="sidebar-box-inner">
+                            <h3 class="sidebar-title">Latest Posts</h3>
+                            <div class="sidebar-latest-research-area">
+                                <ul>
+                                    {% for post in posts %}
+                                        <li>
+                                            <div class="latest-research-img">
+                                                <a href="#"><img src="{{ MEDIA_URL }}/media/{{ post.newsimage_set.first.image }}" class="img-responsive" width="80px" alt="skilled"></a>
+                                            </div>
+                                            <div class="latest-research-content">
+                                                <h4>{{ post.publish|date:"d M, Y" }}</h4>
+                                                <p>{{ post.title }} </p>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- News Page Area End Here -->
+{% endblock content %}

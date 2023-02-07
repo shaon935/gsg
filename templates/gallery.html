@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Gallery Area 1 Start Here -->
+<div class="gallery-area1">
+    <div class="container">
+        <div class="row gallery-wrapper">
+            {% for path in content.photofile_set.all %}
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-box">
+                    <img src="{{ MEDIA_URL }}/media/{{path.image}}" class="img-responsive" alt="gallery">
+                    <div class="gallery-content">
+                        <a href="{{ MEDIA_URL }}/media/{{path.image}}" class="zoom"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Gallery Area 1 End Here -->
+<!-- Lecturers Page 1 Area Start Here -->
+<!--<div class="lecturers-page1-area">
+    <div class="container">
+        <div class="row">
+            {% for faculty in faculties %}
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="single-item">
+                    <div class="lecturers1-item-wrapper">
+                        <div class="lecturers-img-wrapper">
+                            <a href="#"><img class="img-responsive" src="{{ MEDIA_URL }}/media/{{faculty.photo}}" alt="team"></a>
+                        </div>
+                        <div class="lecturers-content-wrapper">
+                            <h3 class="item-title"><a href="#">{{faculty.name}}</a></h3>
+                            <span class="item-designation">{{faculty.designation}}</span>
+                            <ul class="lecturers-social">
+                                <li><a href="mailto:{{faculty.email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                                <li><a href="{{faculty.directory}}"><i class="fa-solid fa-info" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>-->
+<!-- Lecturers Page 1 Area End Here -->
+{% endblock content %}

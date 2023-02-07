@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Inner Page Banner Area Start Here -->
+<!--<div class="inner-page-banner-area" style="background-image: url('{{ MEDIA_URL }}/media/{{contents.banner}}');">
+    <div class="container">
+        <div class="pagination-area">
+            <h1>{{contents.pagename}}</h1>
+            <ul>
+                <li><a href="#">Home</a> -</li>
+                <li>Details</li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+<!-- Inner Page Banner Area End Here -->
+<!-- Courses Page 3 Area Start Here -->
+<div class="lecturers-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="lecturers-contact-info">
+                    <img src="{{ MEDIA_URL }}/media/{{contents.photo}}" class="img-responsive" alt="team">
+                    <h2>{{contents.name}}</h2>
+                    <h3>{{contents.designation}}</h3>
+                    
+                    <ul class="lecturers-contact">
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>{{contents.phone}}</li>
+                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i>{{contents.email}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
+                <h3 class="title-default-left title-bar-big-left-close">{{contents.title}}</h3>
+                <p>{{contents.body|safe}} </p>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Courses Page 3 Area End Here -->
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- About Slider Area Start Here -->
+<div class="about-slider-area">
+    <div class="container">
+        <h2 class="title-default-left-bold title-bar-high">Allumni</h2>
+        <table class="table table-striped table-success">
+            <thead>
+                <tr>
+                    <th>Sl No</th>
+                    <th>IUB ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for alumni in alumnis %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{alumni.std_id}}</td>
+                    <td>{{alumni.name}}</td>
+                    <td>{{alumni.email}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- About Slider Area End Here -->
+{% endblock content %}

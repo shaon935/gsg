@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- About Slider Area Start Here -->
+<div class="about-slider-area">
+    <div class="container">
+        <h2 class="title-default-left-bold title-bar-high">Resources for {{homepage}}</h2>
+        {% if homepage == 'faculty' %}
+        <table class="table table-striped table-primary">
+            <thead>
+                <tr>
+                    <th>SI No.</th>
+                    <th>Document Name</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for resource in resources %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{resource.title}}</td>
+                    <td><a href="{{resource.url}}"><i class="fa-solid fa-link"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% elif homepage == 'alumni' %}
+        <table class="table table-striped table-primary">
+            <thead>
+                <tr>
+                    <th>SI No.</th>
+                    <th>Document Name</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for resource in resources %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{resource.title}}</td>
+                    <td><a href="{{ MEDIA_URL }}/media/{{ eee.file }}"><i class="fa fa-download fa-lg" aria-hidden="true"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <table class="table table-striped table-primary">
+            <thead>
+                <tr>
+                    <th colspan="3">EEE/ETE 400 (FINAL YEAR DESIGN PROJECT)</th>
+                </tr>
+                <tr>
+                    <th width="10%">SI No.</th>
+                    <th>Document Name</th>
+                    <th width="20%">Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for eee in eee400 %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{eee.title}}</td>
+                    <td><a href="{{ MEDIA_URL }}/media/{{ eee.file }}"><i class="fa fa-download fa-lg" aria-hidden="true"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table class="table table-striped table-primary">
+            <thead>
+                <tr>
+                    <th colspan="3">EEE/ETE 498 (SENIOR PROJECT)</th>
+                </tr>
+                <tr>
+                    <th width="10%">SI No.</th>
+                    <th>Document Name</th>
+                    <th width="20%">Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for eee in eee498 %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{eee.title}}</td>
+                    <td><a href="{{ MEDIA_URL }}/media/{{ eee.file }}"><i class="fa fa-download fa-lg" aria-hidden="true"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="table table-striped table-primary">
+            <thead>
+                <tr>
+                    <th colspan="3">EEE/ETE 497/499 (INTERNSHIP)</th>
+                </tr>
+                <tr>
+                    <th width="10%">SI No.</th>
+                    <th>Document Name</th>
+                    <th width="20%">Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for eee in eee497 %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{eee.title}}</td>
+                    <td><a href="{{ MEDIA_URL }}/media/{{ eee.file }}"><i class="fa fa-download fa-lg" aria-hidden="true"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="table table-striped table-primary">
+            <thead>
+                <tr>
+                    <th colspan="3">OTHER FORMS</th>
+                </tr>
+                <tr>
+                    <th width="10%">SI No.</th>
+                    <th>Document Name</th>
+                    <th width="20%">Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for eee in other %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{eee.title}}</td>
+                    <td><a href="{{ MEDIA_URL }}/media/{{ eee.file }}"><i class="fa fa-download fa-lg" aria-hidden="true"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+</div>
+<!-- About Slider Area End Here -->
+{% endblock content %}

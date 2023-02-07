@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Inner Page Banner Area Start Here -->
+<!--<div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
+    <div class="container">
+        <div class="pagination-area">
+            <h1>News_02</h1>
+            <ul>
+                <li><a href="#">Home</a> -</li>
+                <li>News</li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+<!-- Inner Page Banner Area End Here -->
+<!-- Event Page Area Start Here -->
+<div class="event-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+                <div class="row event-inner-wrapper">
+                    {% for event in events %}
+                    <div class="col-xl-12 col-lg-6 col-md-12 col-sm-6">
+                        <div class="single-item">
+                            <div class="item-content">
+                                <h3 class="sidebar-title"><a href="{% url 'web:event' id=event.id %}">{{event.title}}</a></h3>
+                                <p>{{event.body | truncatewords:45 | safe}}</p>
+                                <ul class="event-info-block">
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>{{ event.event_date|date:"d F, Y" }}</li>
+                                    <li><i class="fa-solid fa-clock" aria-hidden="true"></i>{{ event.event_date|date:"g:i A"}}</li>
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>{{event.location}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!--<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <ul class="pagination-center">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                <div class="sidebar">  
+                    <div class="sidebar-box">
+                        <div class="sidebar-box-inner">
+                            <h3 class="sidebar-title">Latest Posts</h3>
+                            <div class="sidebar-latest-research-area">
+                                <ul>
+                                    {% for post in posts %}
+                                        <li>
+                                            <div class="latest-research-img">
+                                                <a href="#"><img src="{{ MEDIA_URL }}/media/{{ post.articlefile_set.first.image }}" class="img-responsive" width="80px" alt="skilled"></a>
+                                            </div>
+                                            <div class="latest-research-content">
+                                                <h4>{{ post.publish|date:"d M, Y" }}</h4>
+                                                <p>{{ post.title }} </p>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Event Page Area End Here -->
+{% endblock content %}

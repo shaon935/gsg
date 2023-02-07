@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- About Slider Area Start Here -->
+<div class="about-slider-area">
+    <div class="container">
+        <h3 class="title-default-left title-bar-big-left-close">{{contents.title}}</h3>
+        <p class="sub-title-full-width">{{contents.body | safe}}</p>
+    </div>
+</div>
+<!-- About Slider Area End Here -->
+{% endblock content %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Courses Page 1 Area Start Here -->
+<div class="courses-page-area1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                
+                <div class="row">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane tab-item animated fadeIn show active" id="menu-1" role="tabpanel" aria-labelledby="menu-1-tab">
+                            <div class="row">
+                                {% for photo in photos %}
+                                <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12">
+                                    <div class="courses-box1">
+                                        <div class="single-item-wrapper">
+                                            <div class="courses-img-wrapper hvr-bounce-to-bottom">
+                                                <img class="img-responsive" src="{{ MEDIA_URL }}/media/{{ photo.photofile_set.first.image }}" height="250px" alt="courses">
+                                                <a href="{% url 'web:photos' id=photo.id %}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                            </div>
+                                            <div class="courses-content-wrapper" style="text-align: center;">
+                                                <h4><a href="{% url 'web:photos' id=photo.id %}">{{photo.title}}</a></h4>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+                        <!-- Listed product show -->
+                        
+                    </div>
+                </div>
+                <!--<div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <ul class="pagination-left">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Courses Page 1 Area End Here -->
+{% endblock content %}

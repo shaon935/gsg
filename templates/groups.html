@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Lecturers Page 1 Area Start Here -->
+<div class="lecturers-page1-area">
+    <div class="container">
+        <div class="row">
+          {% for center in centers %}
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+              <div class="card text-center">
+                  <img src="{{ MEDIA_URL }}/media/{{center.photo}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{center.name}}</h5>    
+                    <a href="{{center.url}}" class="btn btn-primary">Learn More</a>
+                  </div>
+              </div>
+            </div>
+          {% endfor %}  
+        </div>
+    </div>
+</div>
+<!-- Lecturers Page 1 Area End Here -->
+{% endblock content %}

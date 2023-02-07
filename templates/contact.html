@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Contact Us Page 1 Area Start Here -->
+<div class="contact-us-page1-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="contact-us-info1">
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <h3>Phone</h3>
+                            <p>+880 9612-939393</p>
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <h3>Address</h3>
+                            <p>Level 8, Plot 16 Block B, Aftabuddin Ahmed Road, Bashundhara R/A, Dhaka</p>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <h3>E-mail</h3>
+                            <p>gsg@iub.edu.bd</p>
+                        </li>
+                        <li>
+                            <h3>Follow Us</h3>
+                            <ul class="contact-social">
+                                <li><a href="https://www.facebook.com/gsgiub" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <h2 class="title-default-left title-bar-high">Contact With Us</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-form1">
+                        <form id="contact-form">
+                            <fieldset>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Name*" class="form-control" name="name" id="form-name" data-error="Name field is required" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Email*" class="form-control" name="email" id="form-email" data-error="Email field is required" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea placeholder="Message*" class="textarea form-control" name="message" id="form-message" rows="8" cols="20" data-error="Message field is required" required></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-md-12">
+                                    <div class="form-group margin-bottom-none">
+                                        <button type="submit" class="default-big-btn">Send Message</button>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-6 col-md-12">
+                                    <div class='form-response'></div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="google-map-area">
+                <div id="map-canvas" style="width:100%;">
+                    <img class="img-responsive" src="{{ MEDIA_URL }}/media/img/map.PNG" alt="map">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contact Us Page 1 Area End Here -->
+<!-- Lecturers Page 1 Area Start Here -->
+<!--<div class="lecturers-page1-area">
+    <div class="container">
+        <div class="row">
+            {% for faculty in faculties %}
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="single-item">
+                    <div class="lecturers1-item-wrapper">
+                        <div class="lecturers-img-wrapper">
+                            <a href="#"><img class="img-responsive" src="{{ MEDIA_URL }}/media/{{faculty.photo}}" alt="team"></a>
+                        </div>
+                        <div class="lecturers-content-wrapper">
+                            <h3 class="item-title"><a href="#">{{faculty.name}}</a></h3>
+                            <span class="item-designation">{{faculty.designation}}</span>
+                            <ul class="lecturers-social">
+                                <li><a href="mailto:{{faculty.email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                                <li><a href="{{faculty.directory}}"><i class="fa-solid fa-info" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>-->
+<!-- Lecturers Page 1 Area End Here -->
+{% endblock content %}

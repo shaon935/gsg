@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Shop Page 1 Area Start Here -->
+<div class="shop-page1-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                
+                <div class="tab-content">
+                    <div class="tab-pane tab-item animated fadeIn show active" id="menu-1" role="tabpanel" aria-labelledby="menu-1-tab">
+                        <div class="row">
+                            {% for publication in publications %}
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                <div class="product-box1">
+                                    <ul class="product-social">
+                                        {% if publication.link|length > 0 %}
+                                        <li><a href="{{ publication.link }}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                        {% else %}
+                                        <li><a href="{{ MEDIA_URL }}/media/{{ publication.file }}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a></li>           
+                                        {% endif %}
+                                        
+                                    </ul>
+                                    <div class="product-img-holder">
+                                        <a href="#"><img class="img-responsive" src="{{ MEDIA_URL }}/media/{{ publication.image }}" alt="product"></a>
+                                    </div>
+                                    <div class="product-content-holder">
+                                        {% if publication.link|length > 0 %}                                        
+                                        <h3><a href="{{ publication.link }}" target="_blank">{{ publication.name }}</a></h3>
+                                        {% else %}
+                                        <h3><a href="{{ MEDIA_URL }}/media/{{ publication.file }}" target="_blank">{{ publication.name }}</a></h3>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %} 
+                        </div>
+                    </div>
+                    
+                </div>
+                <!--<div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <ul class="pagination-center">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Shop Page 1 Area End Here -->
+{% endblock content %}
