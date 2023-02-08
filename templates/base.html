@@ -129,13 +129,14 @@
                                         <li><a href="#">Events</a>
                                             <ul>
                                                 {% for category in news_categories %}
-                                                    <li class="has-child-menu" ><a href="#">{{ category.name }}</a>
-                                                        <ul class="thired-level">
-                                                            {% for news in category.news_set.all %}
-                                                            <li><a href="{% url 'web:article' id=news.id %}">{{ news.menuname }}</a></li>
-                                                            {% endfor %}
-                                                        </ul>
-                                                    </li>
+
+                                                <li class="has-child-menu"><a href="#">{{ category.name }}</a>
+                                                    <ul class="thired-level">
+                                                        {% for news in category.news_set.all|dictsort:"menuname" %}
+                                                        <li><a href="{% url 'web:article' id=news.id %}">{{ news.menuname }}</a></li>
+                                                    {% endfor %}
+                                                    </ul>
+                                                </li>
                                                 {% endfor %}
                                             </ul>
                                         </li>
