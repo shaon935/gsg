@@ -60,7 +60,7 @@
                                     {% for post in posts %}
                                         <li>
                                             <div class="latest-research-img">
-                                                <a href="#"><img src="{{ MEDIA_URL }}/media/{{ post.newsimage_set.first.image }}" class="img-responsive" width="80px" alt="skilled"></a>
+                                                <a href="{% url 'web:article' id=post.id %}"><img src="{{ MEDIA_URL }}/media/{{ post.newsimage_set.first.image }}" class="img-responsive" width="80px" alt="skilled"></a>
                                             </div>
                                             <div class="latest-research-content">
                                                 <h4>{{ post.publish|date:"d M, Y" }}</h4>
