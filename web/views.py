@@ -34,7 +34,7 @@ def admission(request):
 #    return render(request,'program.html',{'content':contents, 'overview': 'active'})
 def commonpage(request, title):
     contents = get_object_or_404(Page,pagename=title)
-    return render(request, 'program.html',{'content':contents})
+    return render(request, 'program.html',{'content':contents, title: 'active'})
 
 def message(request):
     contents = get_object_or_404(Page,title="Message")
@@ -80,7 +80,7 @@ def all(request):
 def article(request, id):
     contents = get_object_or_404(News,id=id)
     posts = News.objects.all().order_by('-publish')[:5]
-    return render(request,'article.html', {'content': contents, 'posts': posts})
+    return render(request,'article.html', {'content': contents, 'posts': posts, 'news_class':'active'})
     #return HttpResponse("Staff")
 
 def events(request):
@@ -129,7 +129,7 @@ def resources(request, type):
 
 def gallery(request):
     photos = PhotoGallery.objects.all().order_by('-publish')
-    return render(request,'photogallery.html', {'photos': photos, 'gallery': 'active'})
+    return render(request,'photogallery.html', {'photos': photos, 'gallery_class': 'active'})
 
 def publication(request):
     publications = Publication.objects.all().order_by('-name')
@@ -138,11 +138,11 @@ def publication(request):
 def photos(request, id):
     contents = get_object_or_404(PhotoGallery,id=id)
     #contents = PhotoGallery.objects.all().order_by('-publish')[:5]
-    return render(request,'gallery.html', {'content': contents})
+    return render(request,'gallery.html', {'content': contents, 'gallery_class': 'active'})
 
 def contact(request):
     #photos = Gallery.objects.all().order_by('-publish')
-    return render(request,'contact.html')
+    return render(request,'contact.html', {'contact_class': 'active'})
 
 def test(request, title):
     contents = get_object_or_404(Page,pagename=title)

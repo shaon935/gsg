@@ -10,7 +10,14 @@ admin.site.site_header = 'GSG Admin Portal'
 admin.site.site_title = 'GSG' # default: "Django site admin"
 @admin.register(Page)
 class PageAdmin(admin.ModelAdmin):
-    list_display = ('pagename', 'title')
+    list_display = ('title', 'pagename')
+    
+    def get_readonly_fields(self, request, obj=None):
+        if obj:  # obj is not None, so this is an edit
+            return ['pagename',]  # Return a list or tuple of read-only fields' names
+        else:  # This is an addition
+            return []
+    #readonly_fields = ('pagename',)
 
 @admin.register(Alumni)
 class AlumniAdmin(admin.ModelAdmin):

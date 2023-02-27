@@ -227,7 +227,7 @@ ul {
   color: #006400;
 }
 .section-space {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 .mb-none {
   margin-bottom: 0!important;
@@ -3183,7 +3183,7 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
   color: #006400;
 }
 .about-slider-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .about-slider-area {
@@ -3773,7 +3773,7 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
 =========================================================================*/
 .students-join1-area {
   background: #fdc800;
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .students-join1-area {
@@ -3886,7 +3886,7 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
 }
 .students-join2-area {
   background: #f5f5f5;
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .students-join2-area {
@@ -4000,7 +4000,7 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
 }
 .students-join3-area {
   background: #f5f5f5;
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .students-join3-area {
@@ -4939,7 +4939,7 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
   transition: all 0.5s ease-out;
 }
 .lecturers-page-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .lecturers-page-area {
@@ -5075,7 +5075,7 @@ ul.course-feature2 li:before {
   color: #fdc800;
 }
 .lecturers-page1-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .lecturers-page1-area {
@@ -5751,7 +5751,7 @@ ul.course-feature2 li:before {
   }
 }
 .courses-page-area1 {
-  padding: 100px 0;
+  padding: 25px 0;
   background: #f5f5f5;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -5819,7 +5819,7 @@ ul.course-feature2 li:before {
   }
 }
 .courses-page-area3 {
-  padding: 100px 0;
+  padding: 25px 0;
   background: #f5f5f5;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -6029,7 +6029,7 @@ ul.course-feature2 li:before {
   color: #f5f5f5;
 }
 .courses-page-area4 {
-  padding: 100px 0;
+  padding: 25px 0;
   background: #f5f5f5;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -6824,7 +6824,7 @@ ul.course-feature2 li:before {
   text-align: center;
 }
 .news-page-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .news-page-area {
@@ -6980,7 +6980,7 @@ ul.course-feature2 li:before {
   color: #444444;
 }
 .news-details-page-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .news-details-page-area {
@@ -7073,7 +7073,7 @@ ul.course-feature2 li:before {
   margin-right: 0;
 }
 .event-page-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .event-page-area {
@@ -7166,7 +7166,7 @@ ul.course-feature2 li:before {
   color: #fdc800;
 }
 .event-details-page-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .event-details-page-area {
@@ -7325,7 +7325,7 @@ ul.course-feature2 li:before {
 =========================================================================*/
 .certificate-area {
   background: #f8f8f8;
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .certificate-area {
@@ -7662,7 +7662,7 @@ ul.course-feature2 li:before {
 [20] Research Area
 =========================================================================*/
 .research-page1-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .research-page1-area {
@@ -7697,7 +7697,7 @@ ul.course-feature2 li:before {
   margin-bottom: 25px;
 }
 .research-page2-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .research-page2-area {
@@ -7769,7 +7769,7 @@ ul.course-feature2 li:before {
   transition: all 0.5s ease-out;
 }
 .research-page3-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .research-page3-area {
@@ -7806,7 +7806,7 @@ ul.course-feature2 li:before {
   margin-bottom: 30px;
 }
 .research-details-page-area {
-  padding: 100px 0 74px;
+  padding: 25px 0 74px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .research-details-page-area {
@@ -7858,7 +7858,7 @@ ul.course-feature2 li:before {
 [21] Shop Page Area
 =========================================================================*/
 .shop-page1-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .shop-page1-area {
@@ -8079,7 +8079,7 @@ ul.course-feature2 li:before {
   transition: all 0.5s ease-out;
 }
 .shop-page2-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .shop-page2-area {
@@ -8298,7 +8298,7 @@ ul.course-feature2 li:before {
   transition: all 0.5s ease-out;
 }
 .shop-details-page-area {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .shop-details-page-area {
@@ -9348,7 +9348,7 @@ ul.course-feature2 li:before {
 [25] Error Page Area
 =========================================================================*/
 .error-page-area {
-  padding: 100px 0;
+  padding: 25px 0;
   background: #fdc800;
   text-align: center;
 }
@@ -9404,7 +9404,7 @@ ul.course-feature2 li:before {
 [26] Contact Page Area
 =========================================================================*/
 .contact-us-page1-area {
-  padding: 90px 0 0;
+  padding: 25px 0 0;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .contact-us-page1-area {
@@ -9735,7 +9735,7 @@ ul.course-feature2 li:before {
 [27] Footer Area
 =========================================================================*/
 .footer-area-top {
-  padding: 92px 0 50px;
+  padding: 40px 0 0px;
   background: #006400;
 }
 @media (min-width: 992px) and (max-width: 1199px) {

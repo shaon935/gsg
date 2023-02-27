@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DEPARTMENT OF GLOBAL STUDIES & GOVERNANCE (GSG)</title>
+    <title>Department of Global Studies & Governance (GSG), IUB</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -101,16 +101,16 @@
                                 <nav id="desktop-nav">
                                     <ul>
                                         <li class="{{home_page}}"><a href="{% url 'web:home' %}">Home</a></li>
-                                        <li class=""><a href="#">About</a>
+                                        <li class="{{contact_class}}{{overview}}"><a href="#">About</a>
                                             <ul>
-                                                <li><a href="{% url 'web:commonpage' 'overview' %}">Overview</a></li>
+                                                <li class="{{overview}}"><a href="{% url 'web:commonpage' 'overview' %}">Overview</a></li>
                                                 <li><a href="{% url 'web:faculty' %}">Faculty & Staff</a></li>
                                                 <li><a href="#">Cahir's Welcome</a></li>
                                                 <li><a href="{% url 'web:contact' %}">Our Location</a></li>
                                                 <li><a href="{% url 'web:contact' %}">CONTACT</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Program</a>
+                                        <li class="{{major}}{{minor}}{{foundation}}{{internship}}"><a href="#">Program</a>
                                             <ul>
                                                 <li class="has-child-menu"><a href="#">Undergraduate: Tracks</a>
                                                     <ul class="thired-level">
@@ -120,19 +120,19 @@
                                                     </ul>
                                                 </li>
                                                 <li><a href="#">Graduate Program: Under process</a></li>
-                                                <li><a href="{% url 'web:commonpage' 'internship' %}">Internship</a></li>
+                                                <li class="{{internship}}"><a href="{% url 'web:commonpage' 'internship' %}">Internship</a></li>
                                                 <li><a href="#">Thesis</a></li>
                                                 <li><a href="#">International Oppotunities</a></li>
                                                 <li><a href="#">Exchange Students</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Events</a>
+                                        <li class="{{news_class}}"><a href="#">Events</a>
                                             <ul>
                                                 {% for category in news_categories %}
 
                                                 <li class="has-child-menu"><a href="#">{{ category.name }}</a>
                                                     <ul class="thired-level">
-                                                        {% for news in category.news_set.all|dictsort:"menuname" %}
+                                                    {% for news in category.news_set.all|dictsort:"menuname" %}
                                                         <li><a href="{% url 'web:article' id=news.id %}">{{ news.menuname }}</a></li>
                                                     {% endfor %}
                                                     </ul>
@@ -140,15 +140,15 @@
                                                 {% endfor %}
                                             </ul>
                                         </li>
-                                        <li class="{{allumni}}"><a href="#">Student Activities</a>
+                                        <li class="{{allumni}}{{hult}}{{studytour}}"><a href="#">Student Activities</a>
                                             <ul>
                                                 <li class="{{allumni}}"><a href="{% url 'web:alumni' %}">Allumni</a></li>
                                                 <li><a href="#">Club</a></li>
-                                                <li><a href="{% url 'web:commonpage' 'hult' %}">Hult</a></li>
-                                                <li><a href="{% url 'web:commonpage' 'studytour' %}">Study Tour</a></li>
+                                                <li class="{{hult}}"><a href="{% url 'web:commonpage' 'hult' %}">Hult</a></li>
+                                                <li class="{{studytour}}"><a href="{% url 'web:commonpage' 'studytour' %}">Study Tour</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="{% url 'web:gallery' %}">Gallery</a></li>
+                                        <li class="{{gallery_class}}"><a href="{% url 'web:gallery' %}">Gallery</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -170,12 +170,12 @@
                                 <nav id="dropdown">
                                     <ul>
                                         <li><a href="{% url 'web:home' %}">Home</a></li>
-                                        <li><a href="#">About</a>
+                                        <li class="{{contact_class}}"><a href="#">About</a>
                                             <ul>
                                                 <li><a href="#">Faculty & Staff</a></li>
                                                 <li><a href="#">Cahir's Welcome</a></li>
                                                 <li><a href="#">Our Location</a></li>
-                                                <li><a href="{% url 'web:contact' %}"> CONTACT </a></li>
+                                                <li class="{{contact_class}}"><a href="{% url 'web:contact' %}"> CONTACT </a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">Program</a>
